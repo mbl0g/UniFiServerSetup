@@ -19,7 +19,7 @@ sudo systemctl daemon-reload && sudo systemctl start mongod
 #Set JAVA_HOME
 JAVA_HOME=$(find /usr/lib/jvm/ -maxdepth 1 -type d | tail -n 1)
 if [ ! -f /etc/profile.d/java_home.sh ]; then
-  echo "export JAVA_HOME=${JAVA_HOME}" | tee -a /etc/profile.d/java_home.sh
+  echo "export JAVA_HOME=${JAVA_HOME}" | sudo tee -a /etc/profile.d/java_home.sh
 fi
 
 # Install UniFi Network Server
